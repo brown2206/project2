@@ -31,10 +31,19 @@
 article {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section {
+  margin-right: 30px;
 }
 
 body {
   background: url('/assets/snitch.jpg');
   background-size: cover;
+}
+
+.crime {
+  width: 250px;
+  height: 250px;
 }

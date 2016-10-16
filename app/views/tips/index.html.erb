@@ -4,9 +4,10 @@
 <% @tips.each do |tip| %>
   <section>
     <h2><%= link_to tip.offense, tip_path(tip) %></h2>
-    <time>Updated <%= tip.updated_at %></time>
+    <time>Updated <%= tip.updated_at.strftime("%m/%d/%y") %></time>
+    <time>at <%= tip.updated_at.strftime("%I:%M%p") %></time>
     <p><%= tip.location %></p>
-    <p><img src="<%= tip.img_url%>"></p>
+    <p><img src="<%= tip.img_url%>" class="crime"></p>
   </section>
 <% end %>
 </article>
