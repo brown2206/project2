@@ -27,3 +27,8 @@
   font-size: 6px;
   color: #000000;
 }
+
+article {
+  display: flex;
+  flex-direction: row;
+}
