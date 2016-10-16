@@ -1,0 +1,42 @@
+<%= link_to "&larr; Back".html_safe, tips_path %>
+<article>
+  <section>
+    <p><%= @tip.offense %></p>
+    <p><%= @tip.location %></p>
+    <time>Updated <%= @tip.updated_at.strftime("%m/%d/%y") %></time>
+    <time>at <%= @tip.updated_at.strftime("%I:%M%p") %></time>
+    <p><img src="<%= @tip.img_url%>" class="crime"></p>
+  </section>
+  <br>
+
+  <%#<%= link_to "Edit Tip", edit_tip_path(@tip) %>
+  <%#<%= link_to "Delete Tip", tip_path(@tip), method: :delete %>
+  <h2>Suspects</h2>
+  <br>
+  <% @tip.suspects.each do |suspect| %>
+    <div>
+      <ul>
+        <li><time>Updated <%= suspect.updated_at.strftime("%m/%d/%y") %></time></li>
+        <li><time>at <%= suspect.updated_at.strftime("%I:%M%p") %></time></li>
+        <li><img src="<%= suspect.img_url %>"></li>
+        <li><%= suspect.race %></li>
+        <li><%= suspect.gender %></li>
+        <li><%= suspect.height %></li>
+        <li><%= suspect.weight %></li>
+        <li><%= suspect.hair %></li>
+        <li><%= suspect.clothing %></li>
+        <li><%= suspect.weapons %></li>
+        <li><%= suspect.vehicle %></li>
+        <li><%= suspect.year %></li>
+        <li><%= suspect.make %></li>
+        <li><%= suspect.model %></li>
+        <li><%= suspect.color %></li>
+        <li><%= suspect.license %></li>
+        <li><%= suspect.state %></li>
+        <li><%= suspect.description %></li>
+      </ul>
+      <%#<%= link_to "Edit", edit_tip_suspect_path(@tip, suspect) %> |
+      <%#<%= link_to "Delete", tip_suspect_path(@tip, suspect), method: :delete %>
+    <% end %>
+  </div>
+</article>
