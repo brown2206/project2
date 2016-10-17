@@ -49,15 +49,31 @@ body {
   border: 5px solid #F31311;
 }
 
-h2,p,a {
+h2,p,.superhero {
   font-family: 'Bangers', cursive;
   -webkit-text-stroke: 1.0px #FFFFFF;
   -webkit-text-fill-color: #F31311;
   font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-a {
+time {
+font-family: 'Bangers', cursive;
+-webkit-text-stroke: 1.0px #FFFFFF;
+-webkit-text-fill-color: #F31311;
+font-size: 20px;
+align-items: center;
+text-align: center;
+}
+
+.ganggreen {
   text-decoration: none;
+  font-family: 'Bangers', cursive;
+  -webkit-text-stroke: 1.0px #000000;
+  -webkit-text-fill-color: #32cd32;
+  font-size: 60px;
 }
 
 h1 {
@@ -67,4 +83,21 @@ h1 {
   font-size: 150px;
   text-align: center;
   margin: 0;
+}
+
+h3 {
+  text-align: center;
+}
+
+.test {
+  border: 5px solid #F31311;
+  border-radius: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#newtip {
+  margin-top: 300px;
 }

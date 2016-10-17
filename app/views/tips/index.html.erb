@@ -1,12 +1,13 @@
 <h1>SNITCH</h1>
-<%= link_to "Provide a New Tip", new_tip_path %>
+<br>
+<%= link_to "Provide a New Tip", new_tip_path, :class => "superhero" %>
 <article>
 <% @tips.each do |tip| %>
   <section>
-    <h2><%= link_to tip.offense, tip_path(tip) %></h2>
+    <h2><%= link_to tip.offense, tip_path(tip), :class => "ganggreen" %></h2>
+    <p><%= tip.location %></p>
     <time>Updated <%= tip.updated_at.strftime("%m/%d/%y") %></time>
     <time>at <%= tip.updated_at.strftime("%I:%M%p") %></time>
-    <p><%= tip.location %></p>
     <p><img src="<%= tip.img_url%>" class="crime"></p>
   </section>
 <% end %>

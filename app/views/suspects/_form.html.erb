@@ -1,54 +1,69 @@
 <%= form_for [@tip, @suspect] do |f| %>
-  <%= f.label :img_url %>
+  <p>
+  <%= f.label :img_url, class: 'superhero' %>
   <%= f.text_field :img_url %>
-
-  <%= f.label :race %>
+  </p>
+  <p>
+  <%= f.label :race, class: 'superhero' %>
   <%= f.text_field :race %>
-
-  <%= f.label :gender %>
+  </p>
+  <p>
+  <%= f.label :gender, class: 'superhero' %>
   <%= f.text_field :gender %>
-
-  <%= f.label :height %>
+  </p>
+  <p>
+  <%= f.label :height, class: 'superhero' %>
   <%= f.text_field :height %>
-
-  <%= f.label :weight %>
+  </p>
+  <p>
+  <%= f.label :weight, class: 'superhero' %>
   <%= f.text_field :weight %>
-
-  <%= f.label :hair %>
+  </p>
+  <p>
+  <%= f.label :hair, class: 'superhero' %>
   <%= f.text_field :hair %>
-
-  <%= f.label :clothing %>
+  </p>
+  <p>
+  <%= f.label :clothing, class: 'superhero' %>
   <%= f.text_area :clothing %>
-
-  <%= f.label :weapons %>
+  </p>
+  <p>
+  <%= f.label :weapons, class: 'superhero' %>
   <%= f.text_area :weapons %>
-
-  <%= f.label :vehicle %>
+  </p>
+  <p>
+  <%= f.label :vehicle, class: 'superhero' %>
   <%= f.text_field :vehicle %>
-
-  <%= f.label :year %>
+  </p>
+  <p>
+  <%= f.label :year, class: 'superhero' %>
   <%= f.text_field :year %>
-
-  <%= f.label :make %>
+  </p>
+  <p>
+  <%= f.label :make, class: 'superhero' %>
   <%= f.text_field :make %>
-
-  <%= f.label :model %>
+  </p>
+  <p>
+  <%= f.label :model, class: 'superhero' %>
   <%= f.text_field :model %>
-
-  <%= f.label :color %>
+  </p>
+  <p>
+  <%= f.label :color, class: 'superhero' %>
   <%= f.text_field :color %>
-
-  <%= f.label :color %>
-  <%= f.text_field :color %>
-
-  <%= f.label :license %>
+  </p>
+  <p>
+  <%= f.label :license, class: 'superhero' %>
   <%= f.text_field :license %>
-
-  <%= f.label :state %>
+  </p>
+  <p>
+  <%= f.label :state, class: 'superhero' %>
   <%= f.text_field :state %>
-
-  <%= f.label :description %>
+  </p>
+  <p>
+  <%= f.label :description, class: 'superhero' %>
   <%= f.text_area :description %>
-
+  </p>
+  <h3>
   <%= f.submit %>
+  </h3>
 <% end %>

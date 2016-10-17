@@ -1,17 +1,17 @@
-<%= link_to "&larr; Back".html_safe, tips_path %>
+<%= link_to "&larr; Back".html_safe, tips_path, :class => "superhero" %>
 <article>
-  <section>
+  <section class="test">
     <p><%= @tip.offense %></p>
     <p><%= @tip.location %></p>
     <time>Updated <%= @tip.updated_at.strftime("%m/%d/%y") %></time>
     <time>at <%= @tip.updated_at.strftime("%I:%M%p") %></time>
     <p><img src="<%= @tip.img_url%>" class="crime"></p>
-  <%= link_to "Edit Tip", edit_tip_path(@tip) %>
-  <%= link_to "Delete Tip", tip_path(@tip), method: :delete %>
+  <%= link_to "Edit Tip", edit_tip_path(@tip), :class => "superhero" %>
+  <%= link_to "Delete Tip", tip_path(@tip), :class => "superhero", method: :delete %>
   </section>
   <br>
-  <h2>Suspect(s)</h2>
-  <%= link_to "Add new suspect(s)", new_tip_suspect_path(@tip) %>
+  <h2 class="ganggreen">Suspect(s)</h2>
+  <%= link_to "Add new suspect(s)", new_tip_suspect_path(@tip), :class => "superhero" %>
   <br>
   <% @tip.suspects.each do |suspect| %>
     <div>
@@ -35,8 +35,8 @@
         <li><%= suspect.state %></li>
         <li><%= suspect.description %></li>
       </ul>
-      <%= link_to "Edit", edit_tip_suspect_path(@tip, suspect) %> |
-      <%= link_to "Delete", tip_suspect_path(@tip, suspect), method: :delete %>
+      <%= link_to "Edit Suspect(s)", edit_tip_suspect_path(@tip, suspect), :class => "superhero" %> |
+      <%= link_to "Delete Suspect(s)", tip_suspect_path(@tip, suspect), method: :delete, :class => "superhero" %>
     <% end %>
   </div>
 </article>

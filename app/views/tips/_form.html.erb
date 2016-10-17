@@ -1,9 +1,15 @@
 <%= form_for @tip do |f| %>
-  <%= f.label :offense %>
+  <p>
+  <%= f.label :offense, class: 'superhero'%>
   <%= f.text_field :offense %>
-  <%= f.label :location %>
+  </p>
+  <p>
+  <%= f.label :location, class: 'superhero'  %>
   <%= f.text_field :location %>
-  <%= f.label :img_url %>
+  </p>
+  <p>
+  <%= f.label :img_url, class: 'superhero' %>
   <%= f.text_field :img_url %>
-  <%= f.submit %>
+  </p>
+  <h3><%= f.submit %></h3>
 <% end %>
