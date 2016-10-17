@@ -1,9 +1,54 @@
 <%= form_for [@tip, @suspect] do |f| %>
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
   <%= f.label :race %>
   <%= f.text_field :race %>
 
   <%= f.label :gender %>
   <%= f.text_field :gender %>
+
+  <%= f.label :height %>
+  <%= f.text_field :height %>
+
+  <%= f.label :weight %>
+  <%= f.text_field :weight %>
+
+  <%= f.label :hair %>
+  <%= f.text_field :hair %>
+
+  <%= f.label :clothing %>
+  <%= f.text_area :clothing %>
+
+  <%= f.label :weapons %>
+  <%= f.text_area :weapons %>
+
+  <%= f.label :vehicle %>
+  <%= f.text_field :vehicle %>
+
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.label :make %>
+  <%= f.text_field :make %>
+
+  <%= f.label :model %>
+  <%= f.text_field :model %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+  <%= f.label :license %>
+  <%= f.text_field :license %>
+
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
 
   <%= f.submit %>
 <% end %>

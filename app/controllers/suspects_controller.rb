@@ -1,8 +1,4 @@
 class SuspectsController < ApplicationController
-  def index
-      @suspects = Suspect.all
-    end
-
     def new
       @tip = Tip.find(params[:tip_id])
       @suspect = Suspect.new
@@ -11,11 +7,7 @@ class SuspectsController < ApplicationController
     def create
       @tip = Tip.find(params[:tip_id])
       @suspect = @tip.suspects.create(suspect_params)
-      redirect_to @suspect
-    end
-
-    def show
-      @suspect = Suspect.find(params[:id])
+      redirect_to tip_path(@tip)
     end
 
     def edit
@@ -24,15 +16,17 @@ class SuspectsController < ApplicationController
     end
 
     def update
+      @tip = Tip.find(params[:tip_id])
       @suspect = Suspect.find(params[:id])
       @suspect.update(suspect_params)
-      redirect_to @suspect
+      redirect_to tip_path(@tip)
     end
 
     def destroy
+      @tip = Tip.find(params[:tip_id])
       @suspect = Suspect.find(params[:id])
       @suspect.destroy
-      redirect_to suspects_path
+      redirect_to tip_path(@tip)
     end
 
     private

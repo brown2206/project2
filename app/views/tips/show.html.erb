@@ -18,7 +18,7 @@
       <ul>
         <li><time>Updated <%= suspect.updated_at.strftime("%m/%d/%y") %></time></li>
         <li><time>at <%= suspect.updated_at.strftime("%I:%M%p") %></time></li>
-        <li><img src="<%= suspect.img_url %>"></li>
+        <li><img src="<%= suspect.img_url %>" class="crime"></li>
         <li><%= suspect.race %></li>
         <li><%= suspect.gender %></li>
         <li><%= suspect.height %></li>

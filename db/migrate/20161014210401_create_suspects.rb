@@ -18,7 +18,7 @@ class CreateSuspects < ActiveRecord::Migration[5.0]
       t.string :license
       t.string :state
       t.text :description
-      t.references :tip, null: false, index:true, foreign_key: true
+      t.references :tip, null: false, index:true
     end
   end
 end

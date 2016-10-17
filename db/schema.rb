@@ -46,5 +46,4 @@ ActiveRecord::Schema.define(version: 20161014210401) do
     t.string   "img_url"
   end
 
-  add_foreign_key "suspects", "tips"
 end
