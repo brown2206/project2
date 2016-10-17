@@ -45,11 +45,26 @@ body {
 .crime {
   width: 250px;
   height: 250px;
+  border-radius: 12px;
+  border: 5px solid #F31311;
 }
 
-h1,h2,p {
+h2,p,a {
   font-family: 'Bangers', cursive;
   -webkit-text-stroke: 1.0px #FFFFFF;
   -webkit-text-fill-color: #F31311;
-  font-size: 45px;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  -webkit-text-stroke: 1.0px #FFFFFF;
+  -webkit-text-fill-color: #F31311;
+  font-size: 150px;
+  text-align: center;
+  margin: 0;
 }
