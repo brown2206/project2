@@ -1,0 +1,9 @@
+<%= form_for [@tip, @suspect] do |f| %>
+  <%= f.label :race %>
+  <%= f.text_field :race %>
+
+  <%= f.label :gender %>
+  <%= f.text_field :gender %>
+
+  <%= f.submit %>
+<% end %>
