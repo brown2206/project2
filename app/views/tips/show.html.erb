@@ -1,14 +1,12 @@
 <%= link_to "&larr; Back".html_safe, tips_path, :class => "superhero" %>
 <main>
-  <article>
-    <h3><%= @tip.offense %></h3>
-    <h3><%= @tip.location %></h3>
-    <time>Updated <%= @tip.updated_at.strftime("%m/%d/%y") %></time>
-    <time>at <%= @tip.updated_at.strftime("%I:%M%p") %></time>
-    <p><img src="<%= @tip.img_url%>" class="crime"></p>
-  <%= link_to "Edit Tip", edit_tip_path(@tip), :class => "superhero" %>
-  <%= link_to "Delete Tip", tip_path(@tip), :class => "superhero", method: :delete %>
-  </article>
+  <div>
+    <h3><%= @tip.offense %></h3><br>
+    <h3><%= @tip.location %></h3><br>
+    <h3><img src="<%= @tip.img_url %>" class="crime"></h3>
+    <h3><%= link_to "Edit Tip", edit_tip_path(@tip), :class => "superhero" %></h3>
+    <h3><%= link_to "Delete Tip", tip_path(@tip), :class => "superhero", method: :delete %></h3>
+  </div>
 </main>
   <br>
   <h2 class="ganggreen">Suspect(s)</h2>

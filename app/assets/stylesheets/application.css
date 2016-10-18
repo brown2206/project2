@@ -46,22 +46,22 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 12px;
-  border: 5px solid #F31311;
+  border: 5px solid #000000;
 }
 
 h2,h3,.superhero {
   font-family: 'Bangers', cursive;
-  -webkit-text-stroke: 1.0px #FFFFFF;
+  -webkit-text-stroke: 1.0px #000000;
   -webkit-text-fill-color: #F31311;
   font-size: 30px;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
 time {
 font-family: 'Bangers', cursive;
--webkit-text-stroke: 1.0px #FFFFFF;
+-webkit-text-stroke: 1.0px #000000;
 -webkit-text-fill-color: #F31311;
 font-size: 20px;
 align-items: center;
