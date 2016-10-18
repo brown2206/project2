@@ -1,42 +1,42 @@
 <%= link_to "&larr; Back".html_safe, tips_path, :class => "superhero" %>
-<article>
-  <section class="test">
-    <p><%= @tip.offense %></p>
-    <p><%= @tip.location %></p>
+<main>
+  <article>
+    <h3><%= @tip.offense %></h3>
+    <h3><%= @tip.location %></h3>
     <time>Updated <%= @tip.updated_at.strftime("%m/%d/%y") %></time>
     <time>at <%= @tip.updated_at.strftime("%I:%M%p") %></time>
     <p><img src="<%= @tip.img_url%>" class="crime"></p>
   <%= link_to "Edit Tip", edit_tip_path(@tip), :class => "superhero" %>
   <%= link_to "Delete Tip", tip_path(@tip), :class => "superhero", method: :delete %>
-  </section>
+  </article>
+</main>
   <br>
   <h2 class="ganggreen">Suspect(s)</h2>
   <%= link_to "Add new suspect(s)", new_tip_suspect_path(@tip), :class => "superhero" %>
   <br>
+  <article>
   <% @tip.suspects.each do |suspect| %>
-    <div>
-      <ul>
-        <li><time>Updated <%= suspect.updated_at.strftime("%m/%d/%y") %></time></li>
-        <li><time>at <%= suspect.updated_at.strftime("%I:%M%p") %></time></li>
-        <li><img src="<%= suspect.img_url %>" class="crime"></li>
-        <li><%= suspect.race %></li>
-        <li><%= suspect.gender %></li>
-        <li><%= suspect.height %></li>
-        <li><%= suspect.weight %></li>
-        <li><%= suspect.hair %></li>
-        <li><%= suspect.clothing %></li>
-        <li><%= suspect.weapons %></li>
-        <li><%= suspect.vehicle %></li>
-        <li><%= suspect.year %></li>
-        <li><%= suspect.make %></li>
-        <li><%= suspect.model %></li>
-        <li><%= suspect.color %></li>
-        <li><%= suspect.license %></li>
-        <li><%= suspect.state %></li>
-        <li><%= suspect.description %></li>
-      </ul>
-      <%= link_to "Edit Suspect(s)", edit_tip_suspect_path(@tip, suspect), :class => "superhero" %> |
-      <%= link_to "Delete Suspect(s)", tip_suspect_path(@tip, suspect), method: :delete, :class => "superhero" %>
+    <section>
+        <h3><time>Updated <%= suspect.updated_at.strftime("%m/%d/%y") %></time></h3>
+        <h3><time>at <%= suspect.updated_at.strftime("%I:%M%p") %></time></h3>
+        <h3><img src="<%= suspect.img_url %>" class="crime"></h3>
+        <h3>Race: <%= suspect.race %></h3>
+        <h3>Gender: <%= suspect.gender %></h3>
+        <h3>Height: <%= suspect.height %></h3>
+        <h3>Weight: <%= suspect.weight %></h3>
+        <h3>Hair: <%= suspect.hair %></h3>
+        <h3>Clothing: <%= suspect.clothing %></h3>
+        <h3>Weapons: <%= suspect.weapons %></h3>
+        <h3>Vehicle: <%= suspect.vehicle %></h3>
+        <h3>Year: <%= suspect.year %></h3>
+        <h3>Make: <%= suspect.make %></h3>
+        <h3>Model: <%= suspect.model %></h3>
+        <h3>Color: <%= suspect.color %></h3>
+        <h3>License Plate: <%= suspect.license %></h3>
+        <h3>State: <%= suspect.state %></h3>
+        <h3>Description: <%= suspect.description %></h3>
+      <%= link_to "Edit Suspect", edit_tip_suspect_path(@tip, suspect), :class => "superhero" %>
+      <%= link_to "Delete Suspect", tip_suspect_path(@tip, suspect), method: :delete, :class => "superhero" %>
+    </section>
     <% end %>
-  </div>
-</article>
+  </article>

@@ -5,7 +5,7 @@
 <% @tips.each do |tip| %>
   <section>
     <h2><%= link_to tip.offense, tip_path(tip), :class => "ganggreen" %></h2>
-    <p><%= tip.location %></p>
+    <h3><%= tip.location %></h3>
     <time>Updated <%= tip.updated_at.strftime("%m/%d/%y") %></time>
     <time>at <%= tip.updated_at.strftime("%I:%M%p") %></time>
     <p><img src="<%= tip.img_url%>" class="crime"></p>
