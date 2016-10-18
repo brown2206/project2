@@ -1,6 +1,8 @@
 <h1>SNITCH</h1>
 <br>
+<% if current_user %>
 <%= link_to "Provide a New Tip", new_tip_path, :class => "superhero" %>
+<% end %>
 <article>
 <% @tips.each do |tip| %>
   <section>

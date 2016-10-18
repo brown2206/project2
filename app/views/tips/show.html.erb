@@ -4,13 +4,17 @@
     <h3><%= @tip.offense %></h3><br>
     <h3><%= @tip.location %></h3><br>
     <h3><img src="<%= @tip.img_url %>" class="crime"></h3>
+    <% if current_user %>
     <h3><%= link_to "Edit Tip", edit_tip_path(@tip), :class => "superhero" %></h3>
     <h3><%= link_to "Delete Tip", tip_path(@tip), :class => "superhero", method: :delete %></h3>
+    <% end %>
   </div>
 </main>
   <br>
   <h2 class="ganggreen">Suspect(s)</h2>
+  <% if current_user %>
   <%= link_to "Add new suspect(s)", new_tip_suspect_path(@tip), :class => "superhero" %>
+  <% end %>
   <br>
   <article>
   <% @tip.suspects.each do |suspect| %>
@@ -25,6 +29,7 @@
         <h3>Hair: <%= suspect.hair %></h3>
         <h3>Clothing: <%= suspect.clothing %></h3>
         <h3>Weapons: <%= suspect.weapons %></h3>
+        <% if !suspect.vehicle.empty? %>
         <h3>Vehicle: <%= suspect.vehicle %></h3>
         <h3>Year: <%= suspect.year %></h3>
         <h3>Make: <%= suspect.make %></h3>
@@ -32,9 +37,12 @@
         <h3>Color: <%= suspect.color %></h3>
         <h3>License Plate: <%= suspect.license %></h3>
         <h3>State: <%= suspect.state %></h3>
+        <% end %>
         <h3>Description: <%= suspect.description %></h3>
+      <% if current_user %>
       <%= link_to "Edit Suspect", edit_tip_suspect_path(@tip, suspect), :class => "superhero" %>
       <%= link_to "Delete Suspect", tip_suspect_path(@tip, suspect), method: :delete, :class => "superhero" %>
+      <% end %>
     </section>
     <% end %>
   </article>

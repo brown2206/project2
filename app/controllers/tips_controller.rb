@@ -8,7 +8,7 @@ class TipsController < ApplicationController
   end
 
   def create
-    @tip = Tip.create!(tip_params)
+    @tip = Tip.create!(tip_params.merge(user: current_user))
     redirect_to tip_path(@tip)
   end
 
@@ -22,13 +22,21 @@ class TipsController < ApplicationController
 
   def update
     @tip = Tip.find(params[:id])
+    if @tip.user == current_user && !@tip.user.nil?
     @tip.update(tip_params)
-    redirect_to tip_path(@tip)
+  else
+    flash[:notice] = "Please don't edit someone else's tip."
+  end
+  redirect_to tip_path(@tip)
   end
 
   def destroy
     @tip = Tip.find(params[:id])
+    if @tip.user == current_user && !@tip.user.nil?
     @tip.destroy
+  else
+    flash[:alert] = "Only the creator of the tip can delete it."
+  end
     redirect_to tips_path
   end
 
