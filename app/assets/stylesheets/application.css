@@ -122,7 +122,9 @@ span {
 }
 
 .input {
-  display: flex;
+  display:inline-block;
   flex-direction: row;
   justify-content: center;
+  margin-left: 260px;
+  margin-top: -50px;
 }
