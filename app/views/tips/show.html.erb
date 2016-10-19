@@ -29,7 +29,7 @@
         <h3>Hair: <%= suspect.hair %></h3>
         <h3>Clothing: <%= suspect.clothing %></h3>
         <h3>Weapons: <%= suspect.weapons %></h3>
-        <% if !suspect.vehicle.empty? %>
+        <% if suspect.vehicle? %>
         <h3>Vehicle: <%= suspect.vehicle %></h3>
         <h3>Year: <%= suspect.year %></h3>
         <h3>Make: <%= suspect.make %></h3>

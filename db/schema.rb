@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20161018194626) do
   enable_extension "plpgsql"
 
   create_table "suspects", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "img_url"
     t.string   "race"
     t.string   "gender"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20161018194626) do
     t.string   "hair"
     t.text     "clothing"
     t.text     "weapons"
-    t.string   "vehicle"
+    t.boolean  "vehicle",     default: false
     t.integer  "year"
     t.string   "make"
     t.string   "model"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20161018194626) do
     t.string   "license"
     t.string   "state"
     t.text     "description"
-    t.integer  "tip_id",      null: false
+    t.integer  "tip_id",                      null: false
     t.index ["tip_id"], name: "index_suspects_on_tip_id", using: :btree
   end
 

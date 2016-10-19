@@ -10,7 +10,7 @@ class CreateSuspects < ActiveRecord::Migration[5.0]
       t.string :hair
       t.text :clothing
       t.text :weapons
-      t.string :vehicle
+      t.boolean :vehicle, default: false
       t.integer :year
       t.string :make
       t.string :model
