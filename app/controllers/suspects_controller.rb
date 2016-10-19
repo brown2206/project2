@@ -1,4 +1,5 @@
 class SuspectsController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
     def new
       @tip = Tip.find(params[:tip_id])
       @suspect = Suspect.new
@@ -17,8 +18,12 @@ class SuspectsController < ApplicationController
 
     def update
       @tip = Tip.find(params[:tip_id])
+      if @tip.user == current_user && !@tip.user.nil?
       @suspect = Suspect.find(params[:id])
       @suspect.update(suspect_params)
+    else
+      flash[:notice] = "Please don't edit someone else's tip."
+    end
       redirect_to tip_path(@tip)
     end
 
