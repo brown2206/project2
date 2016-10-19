@@ -19,8 +19,10 @@
     <%= '*' * (current_user.email.size - 4) + current_user.email[-4..-1] %>
     <% end %>
   </div>
+  <div class="superhero">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+  </div>
     <%= yield %>
   </body>
 </html>
