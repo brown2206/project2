@@ -19,14 +19,22 @@ class SuspectsController < ApplicationController
     def update
       @tip = Tip.find(params[:tip_id])
       @suspect = Suspect.find(params[:id])
+      if @tip.user == current_user && !@tip.user.nil?
       @suspect.update(suspect_params)
+    else
+      flash[:alert] = "Only the person that provided the tip can edit it."
+    end
       redirect_to tip_path(@tip)
     end
-    
+
     def destroy
       @tip = Tip.find(params[:tip_id])
       @suspect = Suspect.find(params[:id])
+      if @tip.user == current_user && !@tip.user.nil?
       @suspect.destroy
+    else
+      flash[:alert] = "Only the person that provided the tip can delete it."
+    end
       redirect_to tip_path(@tip)
     end
 
