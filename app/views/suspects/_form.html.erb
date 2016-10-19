@@ -1,67 +1,74 @@
+<div class="paste">
 <%= form_for [@tip, @suspect] do |f| %>
+  <section class="input">
   <p>
-  <%= f.label :img_url, class: 'superhero' %>
+  <%= f.label :img_url %>
   <%= f.text_field :img_url %>
   </p>
   <p>
-  <%= f.label :race, class: 'superhero' %>
-  <%= f.text_field :race %>
+  <%= f.label :race %>
+  <%= f.select :race, ["", "AMERICAN INDIAN / ALASKA NATIVE", "ASIAN", "BLACK / AFRICAN AMERICAN", "NATIVE HAWAIIAN / PACIFIC ISLANDER", "WHITE", "OTHER"]%>
   </p>
   <p>
-  <%= f.label :gender, class: 'superhero' %>
-  <%= f.text_field :gender %>
+  <%= f.label :gender %>
+  <%= f.select :gender, ["", "MALE", "FEMALE", "TRANSGENDER"]%>
   </p>
   <p>
-  <%= f.label :height, class: 'superhero' %>
-  <%= f.text_field :height %>
+  <%= f.label :height %>
+  <%= f.select :height, ["","4ft","4ft 3in","4ft 6in","4ft 9in","5ft","5ft 3in","5ft 6in","5ft 9in","6ft","6ft 3in","6ft 6in","6ft 9in","7ft","7ft 3in","7ft 6in"] %>
   </p>
   <p>
-  <%= f.label :weight, class: 'superhero' %>
-  <%= f.text_field :weight %>
+  <%= f.label :weight %>
+  <%= f.select :weight, ["","100","110","120","130","140","150","160","170","180","190","200","210","220","230","240","250","260","270","280","290","300","310","320","330","340","350+"] %>
   </p>
   <p>
-  <%= f.label :hair, class: 'superhero' %>
+  <%= f.label :hair %>
   <%= f.text_field :hair %>
   </p>
   <p>
-  <%= f.label :clothing, class: 'superhero' %>
+  <%= f.label :clothing %>
   <%= f.text_area :clothing %>
   </p>
   <p>
-  <%= f.label :weapons, class: 'superhero' %>
+  <%= f.label :weapons %>
   <%= f.text_area :weapons %>
   </p>
+  </section>
+
+  <section class="input">
   <p>
-  <%= f.label :vehicle, class: 'superhero' %>
+  <%= f.label :vehicle %>
   <%= f.check_box :vehicle %>
   </p>
   <p>
-  <%= f.label :year, class: 'superhero' %>
-  <%= f.text_field :year %>
+  <%= f.label :year %>
+  <%= f.select :year, ["","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"] %>
   </p>
   <p>
-  <%= f.label :make, class: 'superhero' %>
+  <%= f.label :make %>
   <%= f.text_field :make %>
   </p>
   <p>
-  <%= f.label :model, class: 'superhero' %>
+  <%= f.label :model %>
   <%= f.text_field :model %>
   </p>
   <p>
-  <%= f.label :color, class: 'superhero' %>
+  <%= f.label :color %>
   <%= f.text_field :color %>
   </p>
   <p>
-  <%= f.label :license, class: 'superhero' %>
+  <%= f.label :license %>
   <%= f.text_field :license %>
   </p>
   <p>
-  <%= f.label :state, class: 'superhero' %>
+  <%= f.label :state %>
   <%= f.text_field :state %>
   </p>
   <p>
-  <%= f.label :description, class: 'superhero' %>
+  <%= f.label :description %>
   <%= f.text_area :description %>
   </p>
-  <%= f.submit %>
-<% end %>
+  </section>
+  <span><%= f.submit %></span>
+  <% end %>
+</div>

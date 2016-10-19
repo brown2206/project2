@@ -93,6 +93,36 @@ a {
   text-decoration: none;
 }
 
+span {
+  margin-left: 45%;
+}
+
 .detail {
   float: right;
+}
+
+.putty {
+  display: inline-block;
+  align-items: center;
+  margin-left: 40%;
+  margin-top: 15%;
+  font-family: 'Bangers', cursive;
+  -webkit-text-stroke: 1.0px #000000;
+  -webkit-text-fill-color: #F31311;
+  font-size: 30px;
+}
+
+.paste {
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  margin-top: 10%;
+  -webkit-text-stroke: 1.0px #000000;
+  -webkit-text-fill-color: #F31311;
+  font-size: 30px;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

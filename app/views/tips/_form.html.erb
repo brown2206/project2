@@ -1,15 +1,17 @@
+<div class="putty">
 <%= form_for @tip do |f| %>
   <p>
-  <%= f.label :offense, class: 'superhero'%>
+  <%= f.label :offense %>
   <%= f.text_field :offense %>
   </p>
   <p>
-  <%= f.label :location, class: 'superhero'  %>
+  <%= f.label :location %>
   <%= f.text_field :location %>
   </p>
   <p>
-  <%= f.label :img_url, class: 'superhero' %>
+  <%= f.label :img_url %>
   <%= f.text_field :img_url %>
   </p>
   <%= f.submit %>
 <% end %>
+</div>
