@@ -12,7 +12,7 @@
   <body background = "/assets/snitch.jpg">
     <div class="superhero">
     <% if !current_user %>
-      <%= link_to "Private Sign Up", new_user_registration_path %>
+      <%= link_to "Private Sign Up", new_user_registration_path %> |
       <%= link_to "Private Sign In", new_user_session_path %>
     <% else %>
       <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

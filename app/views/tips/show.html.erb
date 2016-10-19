@@ -39,9 +39,11 @@
         <h3>State: <%= suspect.state %></h3>
         <% end %>
         <h3>Description: <%= suspect.description %></h3>
+      <div class="superhero">
       <% if current_user %>
-      <%= link_to "Edit Suspect", edit_tip_suspect_path(@tip, suspect), :class => "superhero" %>
-      <%= link_to "Delete Suspect", tip_suspect_path(@tip, suspect), method: :delete, :class => "superhero" %>
+      <%= link_to "Edit Suspect", edit_tip_suspect_path(@tip, suspect) %> |
+      <%= link_to "Delete Suspect", tip_suspect_path(@tip, suspect), method: :delete %>
+      </div>
       <% end %>
     </section>
     <% end %>
